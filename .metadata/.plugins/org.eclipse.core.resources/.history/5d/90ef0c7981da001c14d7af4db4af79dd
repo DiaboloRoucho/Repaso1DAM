@@ -1,0 +1,68 @@
+package pacientes;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Iterator;
+import java.util.TreeSet;
+
+public class AplicacionPacientes {
+
+	public static void main(String[] args) throws IOException {
+
+		TreeSet<Ficha> archivo = new TreeSet<Ficha>();
+		BufferedReader bufer = new BufferedReader(new InputStreamReader(System.in));
+		String entrada = null;
+		do {
+			menu();
+			entrada=bufer.readLine();
+			switch (Integer.parseInt(entrada)) {
+			case 1:
+				crear(archivo, bufer);
+				break;
+
+			case 2:
+				Iterator<Ficha> it = archivo.iterator();
+				while (it.hasNext()) {
+					Ficha aux = (Ficha) it.next();
+					System.out.println(aux.toString());
+				}
+				break;
+
+			case 3:
+				
+				break;
+
+			case 4:
+				
+				break;
+			case 0:
+				
+				break;
+
+			default:
+				break;
+			}
+		} while (!entrada.equals("0"));
+	}
+
+	private static void crear(TreeSet<Ficha> archivo, BufferedReader bufer) throws IOException {
+		System.out.println("Introduce el numero de historia");
+		String num=bufer.readLine();
+		System.out.println("Introduce el nombre");
+		String nom=bufer.readLine();
+		System.out.println("Introduce el diagnostico");
+		String diag=bufer.readLine();
+		archivo.add(new Ficha(num, nom, diag));
+	}
+
+	private static void menu() {
+		System.out.println("----Menu de opciones----");
+		System.out.println("1. Añadir ficha");
+		System.out.println("2. Listado");
+		System.out.println("3. Buscar ficha");
+		System.out.println("4. Eliminar ficha");
+		System.out.println("0. Salir");
+	}
+
+}

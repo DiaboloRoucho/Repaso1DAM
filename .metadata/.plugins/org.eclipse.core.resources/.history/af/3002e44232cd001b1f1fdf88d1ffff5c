@@ -1,0 +1,27 @@
+package cosadestudio2;
+
+public class TestRRHH1 {
+
+	public static void main(String[] args) {
+		
+		Empleado e1=new Empleado(000, "Julian Casablancas", "Recepcionista");
+		Empleado e2=new Empleado(111, "Hermenejildo Estroncio", "Ordenanza");
+		Empleado e3=new Empleado(222, "Belarmino Pichalarga", "Chofer");
+		Gerente g1=new Gerente(333, "Abundio Sos", "RRHH");
+		Directores d1=new Directores(444, "Areliano Marquesino", "RRHH", true);
+		Empleado[] empleados=new Empleado[5];
+			empleados[0]=e1;
+			empleados[1]=e2;
+			empleados[2]=e3;
+			empleados[3]=g1;
+			empleados[4]=d1;
+		int i;
+		for (i=0;i<=4;i++);{
+			
+			empleados[i].visdatos();
+		}
+		
+
+	}
+
+}
