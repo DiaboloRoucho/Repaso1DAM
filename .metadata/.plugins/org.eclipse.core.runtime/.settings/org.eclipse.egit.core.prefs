@@ -1,3 +1,4 @@
-GitRepositoriesView.GitDirectories=
-GitRepositoriesView.GitDirectories.relative=
+GitRepositoriesView.GitDirectories=C\:\\Users\\andre\\eclipse-workspace\\.git;C\:\\Users\\andre\\git\\prueba eclipse\\.git;
+GitRepositoriesView.GitDirectories.relative=.git;C\:\\Users\\andre\\git\\prueba eclipse\\.git;
+RepositorySearchDialogSearchPath=C\:\\Users\\andre\\git
 eclipse.preferences.version=1
